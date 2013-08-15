@@ -1,0 +1,35 @@
+@mixin above($above) {
+  @media screen and (min-width: $above){
+    @content;
+  }
+}
+
+@mixin below($below) {
+  @media screen and (max-width: $below){
+    @content;
+  }
+}
+
+@mixin between($low, $high) {
+  @media screen and (max-width: $low), screen and (max-width: $high) {
+    @content;
+  }
+}
+
+@mixin bg-color-fallback($r, $g, $b, $a) {
+  background-color: rgb($r, $g, $b);
+  background-color: rgba($r, $g, $b, $a);
+}
+
+
+.cl {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
