@@ -21,6 +21,23 @@
   background-color: rgba($r, $g, $b, $a);
 }
 
+@mixin pos($left: false, $top: false, $right: false, $bottom: false) {
+  @if $left {
+    left: $left;
+  }
+
+  @if $top {
+    top: $left;
+  }
+
+  @if $right {
+    right: $right;
+  }
+
+  @if $bottom {
+    bottom: $bottom;
+  }
+}
 
 .cl {
   clear: both;
