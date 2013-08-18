@@ -1,0 +1,5 @@
+@import "./_mo";
+
+div {
+  @include fullWidthAt(500px);
+}

@@ -35,6 +35,24 @@
   }
 }
 
+@mixin hideAt($screen_size) {
+  @media screen and (max-width: $screen_size) {
+    display: none;
+  }
+}
+
+@mixin fullWidthAt($screen_size) {
+  @media screen and (max-width: $screen_size) {
+    width: 100%;
+  }
+}
+
+@mixin centerTextAt($screen_size) {
+  @media screen and (max-width: $screen_size) {
+    text-align: center;
+  }
+}
+
 @mixin bg-color($r, $g, $b: false, $a: false) {
   $bg_color: #FFF;
   $ie_8: '\0/';
