@@ -16,10 +16,15 @@
   }
 }
 
-@mixin bg-color($r, $g, $b, $a) {
-  $bg_color: rgba($r, $g, $b, $a);
+@mixin bg-color($r, $g, $b: false, $a: false) {
+  $bg_color: #FFF;
+  @if $b {
+    $bg_color: rgba($r, $g, $b, $a);
+  } @else {
+    $bg_color: transparentize($r, $g);
+  }
 
-  background-color: rgb($r, $g, $b);
+  background-color: opacify($bg_color, 1);
   background-color: $bg_color;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}');
   background-color: transparent\9;

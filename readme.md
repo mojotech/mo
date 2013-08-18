@@ -23,8 +23,11 @@ API
   background: yellow
 }
 
+// hex
+@include bg-color(#FF0000, 0.4);
+
 // rgba
-@include bg-color(100, 200, 100, 0.1);
+@include bg-color(100, 200, 20, 0.5);
 
 // top right bottom left
 @include pos(10px, false, 2px, 10px);
