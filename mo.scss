@@ -16,12 +16,17 @@
   }
 }
 
-@mixin bg-color-fallback($r, $g, $b, $a) {
+@mixin bg-color($r, $g, $b, $a) {
+  $bg_color: rgba($r, $g, $b, $a);
+
   background-color: rgb($r, $g, $b);
-  background-color: rgba($r, $g, $b, $a);
+  background-color: $bg_color;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}');
+  background-color: transparent\9;
+  zoom: 1\9;
 }
 
-@mixin pos($left: false, $top: false, $right: false, $bottom: false) {
+@mixin pos($top: false, $right: false, $bottom: false, $left: false) {
   @if $left {
     left: $left;
   }
@@ -37,16 +42,4 @@
   @if $bottom {
     bottom: $bottom;
   }
-}
-
-.cl {
-  clear: both;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
 }
