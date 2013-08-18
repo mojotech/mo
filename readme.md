@@ -28,5 +28,4 @@ API
 
 // top right bottom left
 @include pos(10px, false, 2px, 10px);
-}
 ```
