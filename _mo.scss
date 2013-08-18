@@ -1,3 +1,15 @@
+// Screen sizes
+$tiny_snap: 320px;
+$small_snap: 568px;
+$med_snap: 1024px;
+$large_snap: 1200px;
+
+@mixin iphone_5() {
+  @media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
 @mixin above($above) {
   @media screen and (min-width: $above){
     @content;
