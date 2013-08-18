@@ -29,6 +29,8 @@
   filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}');
   background-color: transparent\9;
   zoom: 1\9;
+
+  @content;
 }
 
 @mixin pos($top: false, $right: false, $bottom: false, $left: false) {
@@ -47,4 +49,6 @@
   @if $bottom {
     bottom: $bottom;
   }
+
+  @content;
 }
