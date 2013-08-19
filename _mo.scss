@@ -39,7 +39,7 @@
   }
 
   @if $top {
-    top: $left;
+    top: $top;
   }
 
   @if $right {
