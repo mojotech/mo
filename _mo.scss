@@ -60,7 +60,12 @@
   text-overflow:  ellipsis;
 }
 
-@mixin size($width, $height) {
+@mixin size($width, $height: false) {
   width:  $width;
-  height: $height;
+
+  @if $height  {
+    height: $height;
+  } @else {
+    height: $width;
+  }
 }

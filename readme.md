@@ -37,5 +37,8 @@ API
 
 //short hand for setting width and height of an element
 @include size(100px, 200px);
+
+//you can also set both the width and height with a single value
+@include size(300px);
 ```
 
