@@ -59,3 +59,8 @@
   white-space:    nowrap;
   text-overflow:  ellipsis;
 }
+
+@mixin size($width, $height) {
+  width:  $width;
+  height: $height;
+}

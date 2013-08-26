@@ -34,4 +34,8 @@ API
 
 //convert text area to a single line ellipsis overflow area
 @include ellipsis(50px);
+
+//short hand for setting width and height of an element
+@include size(100px, 200px);
 ```
+
