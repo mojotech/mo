@@ -31,4 +31,7 @@ API
 
 // top right bottom left
 @include pos(10px, false, 2px, 10px);
+
+//convert text area to a single line ellipsis overflow area
+@include ellipsis(50px);
 ```
