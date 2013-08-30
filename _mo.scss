@@ -18,6 +18,8 @@
 
 @mixin bg-color($r, $g, $b: false, $a: false) {
   $bg_color: #FFF;
+  $ie_8: '\0/';
+
   @if $b {
     $bg_color: rgba($r, $g, $b, $a);
   } @else {
@@ -26,9 +28,10 @@
 
   background-color: opacify($bg_color, 1);
   background-color: $bg_color;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}');
-  background-color: transparent\9;
-  zoom: 1\9;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}')#{$ie_8};
+  background-color: transparent#{$ie_8};
+  zoom: 1#{$ie_8};
 
   @content;
 }
