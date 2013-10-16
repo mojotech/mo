@@ -1,8 +1,16 @@
-mo – a better sass base
+mo -- better mixins
 ===============
 
 [![Build Status](https://travis-ci.org/samccone/mo.png)](https://travis-ci.org/samccone/mo)
 
+mo provides a basic set of mixins to make styling your app simple.
+
+The problem right now is that you have to include a tool like bourbon or compass. (which are massive)
+
+mo is simple and small. built out of my need.
+
+
+#### Give it a go
 ```scss
 @import "mo";
 ```
