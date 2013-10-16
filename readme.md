@@ -1,6 +1,8 @@
 mo – a better sass base
 ===============
 
+![](https://travis-ci.org/samccone/mo.png)
+
 ```scss
 @import "mo";
 ```
