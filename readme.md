@@ -1,7 +1,7 @@
 mo – a better sass base
 ===============
 
-![](https://travis-ci.org/samccone/mo.png)
+[![Build Status](https://travis-ci.org/samccone/mo.png)](https://travis-ci.org/samccone/mo)
 
 ```scss
 @import "mo";
