@@ -1,0 +1,14 @@
+div {
+  top: 1px;
+  right: 2px; }
+
+h1 {
+  left: 0;
+  top: 1px;
+  right: 2px;
+  bottom: 5px; }
+
+span {
+  left: 0;
+  top: 1px;
+  bottom: 5px; }

@@ -1,0 +1,17 @@
+body {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#33FFFFFF', endColorstr='#33FFFFFF');
+  background-color: transparent\9;
+  zoom: 1\9;
+  width: 100px;
+  height: 200px;
+  width: 200px;
+  height: 200px; }
+
+a :active, a .tap {
+  background: yellow; }
+  a :active.foo, a .tap.foo {
+    background: red; }
+    a :active.foo.zap, a .tap.foo.zap {
+      background: teal; }

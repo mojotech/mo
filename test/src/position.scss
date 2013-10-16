@@ -1,0 +1,13 @@
+@import "./_mo";
+
+div {
+  @include pos(1px, 2px);
+}
+
+h1 {
+  @include pos(1px, 2px, 5px, 0);
+}
+
+span {
+  @include pos(1px, false, 5px, 0);
+}

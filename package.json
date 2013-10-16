@@ -1,0 +1,25 @@
+{
+  "name": "mo",
+  "version": "0.1.0",
+  "description": "a sass helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samccone/mo.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Sam Saccone",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/samccone/mo/issues"
+  },
+  "dependencies": {
+    "mocha": "~1.13.0",
+    "node-sass": "~0.6.7"
+  }
+}
