@@ -1,0 +1,15 @@
+@import "./_mo";
+
+h1 {
+  @include below(200px) {
+    background: black;
+  }
+
+  @include above(300px) {
+    background: yellow;
+  }
+
+  @include between(200px, 500px) {
+    background: red;
+  }
+}

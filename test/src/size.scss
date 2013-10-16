@@ -1,0 +1,9 @@
+@import "./_mo";
+
+div {
+  @include size(100px, 200px);
+}
+
+div {
+  @include size(400px);
+}

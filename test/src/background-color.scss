@@ -1,0 +1,9 @@
+@import "./_mo";
+
+div {
+  @include bg-color(244, 100, 60, 0.4)
+}
+
+#ok {
+  @include bg-color(#FF0000, 0.4)
+}
