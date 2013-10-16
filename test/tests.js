@@ -7,9 +7,9 @@ function matchHelper(name) {
   assert.equal(
     fs.readFileSync("test/expected/"+name+".css", "utf8")
   ,
-  sass.renderSync({
+    sass.renderSync({
       data: fs.readFileSync("test/src/"+name+".scss", "utf8")
-  })
+    })
   );
 }
 
