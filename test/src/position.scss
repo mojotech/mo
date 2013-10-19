@@ -11,3 +11,19 @@ h1 {
 span {
   @include pos(1px, false, 5px, 0);
 }
+
+h5 {
+  @include pos(absolute, 1px, false, 5px, 0);
+}
+
+h6 {
+  @include pos(fixed, 2px, 5px);
+}
+
+b {
+  @include pos(relative, 2px, 5px);
+}
+
+i {
+  @include pos(static, 2px, 5px);
+}

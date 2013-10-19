@@ -39,6 +39,9 @@ API
 // rgba
 @include bg-color(100, 200, 20, 0.5);
 
+// position top right bottom left
+@include pos(fixed, 10px, false, 2px, 10px);
+
 // top right bottom left
 @include pos(10px, false, 2px, 10px);
 

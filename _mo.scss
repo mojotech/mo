@@ -1,4 +1,4 @@
-// v0.1.0
+// v0.1.1
 @mixin above($above) {
   @media screen and (min-width: $above){
     @content;
@@ -37,7 +37,16 @@
   @content;
 }
 
-@mixin pos($top: false, $right: false, $bottom: false, $left: false) {
+@mixin pos($location: false, $top: false, $right: false, $bottom: false, $left: false) {
+  @if $location == "relative" or $location == "absolute" or $location == "fixed" or $location == "static" {
+    position: $location;
+  } @else {
+    $left   : $bottom;
+    $bottom : $right;
+    $right  : $top;
+    $top    : $location;
+  }
+
   @if $left {
     left: $left;
   }

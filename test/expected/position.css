@@ -12,3 +12,24 @@ span {
   left: 0;
   top: 1px;
   bottom: 5px; }
+
+h5 {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  bottom: 5px; }
+
+h6 {
+  position: fixed;
+  top: 2px;
+  right: 5px; }
+
+b {
+  position: relative;
+  top: 2px;
+  right: 5px; }
+
+i {
+  position: static;
+  top: 2px;
+  right: 5px; }
