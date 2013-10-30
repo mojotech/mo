@@ -55,11 +55,12 @@ API
 @include size(300px);
 
 //retina backgrounds
+//file path sans extenstion, extenstion
+
 @include retina-background-image('cat');
-Will look for cat.png and cat@2x.png
+//Will look for cat.png and cat@2x.png
 
 @include retina-background-image('cat', 'jpg');
-Will look for cat.jpg and cat@2x.jpg
 
 ```
 
