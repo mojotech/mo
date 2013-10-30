@@ -30,7 +30,7 @@
   background-color: opacify($bg_color, 1);
   background-color: $bg_color;
 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}')#{$ie_8};
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}')#{$ie_8};
   background-color: transparent#{$ie_8};
   zoom: 1#{$ie_8};
 
