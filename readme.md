@@ -53,5 +53,13 @@ API
 
 //you can also set both the width and height with a single value
 @include size(300px);
+
+//retina backgrounds
+@include retina-background-image('cat');
+Will look for cat.png and cat@2x.png
+
+@include retina-background-image('cat', 'jpg');
+Will look for cat.jpg and cat@2x.jpg
+
 ```
 

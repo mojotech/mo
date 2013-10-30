@@ -1,4 +1,4 @@
-// v0.1.1
+// v0.2.0
 @mixin above($above) {
   @media screen and (min-width: $above){
     @content;
@@ -80,5 +80,20 @@
     height: $height;
   } @else {
     height: $width;
+  }
+}
+
+@mixin retina-background-image($name, $extension: png) {
+  background-image: "#{$name}.#{$extension}";
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (  min--moz-device-pixel-ratio: 2),
+  only screen and (    -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: "#{$name}@2x.#{$extension}";
+    background-size: cover;
   }
 }

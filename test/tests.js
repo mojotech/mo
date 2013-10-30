@@ -33,4 +33,8 @@ describe('Mixins', function() {
   it('ellipsis', function() {
     matchHelper('ellipsis');
   });
+
+  it('retian background image', function() {
+    matchHelper('retina-background-image');
+  });
 });

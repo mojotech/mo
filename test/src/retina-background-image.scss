@@ -1,0 +1,9 @@
+@import "./_mo";
+
+div {
+  @include retina-background-image('cat');
+}
+
+span {
+  @include retina-background-image('cat', 'jpg');
+}
