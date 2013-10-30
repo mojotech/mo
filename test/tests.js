@@ -34,7 +34,7 @@ describe('Mixins', function() {
     matchHelper('ellipsis');
   });
 
-  it('retian background image', function() {
+  it('retina background image', function() {
     matchHelper('retina-background-image');
   });
 });
