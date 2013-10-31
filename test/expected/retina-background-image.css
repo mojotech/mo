@@ -1,13 +1,13 @@
 div {
-  background-image: "cat.png"; }
+  background-image: url("cat.png"); }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     div {
-      background-image: "cat@2x.png";
+      background-image: url("cat@2x.png");
       background-size: cover; } }
 
 span {
-  background-image: "cat.jpg"; }
+  background-image: url("cat.jpg"); }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     span {
-      background-image: "cat@2x.jpg";
+      background-image: url("cat@2x.jpg");
       background-size: cover; } }
