@@ -1,7 +1,7 @@
 mo -- better mixins
 ===============
 
-[![Build Status](https://travis-ci.org/samccone/mo.png)](https://travis-ci.org/samccone/mo)
+[![Build Status](https://travis-ci.org/mojotech/mo.png)](https://travis-ci.org/mojotech/mo)
 
 mo provides a basic set of mixins to make styling your app simple.
 
