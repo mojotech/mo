@@ -1,7 +1,7 @@
 // v0.2.3
 @mixin above($above, $vertical: false) {
   @if $vertical {
-    @media screen and (max-height: $below){
+    @media screen and (min-height: $below){
       @content;
     }
   } @else {
