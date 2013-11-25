@@ -1,19 +1,37 @@
-// v0.2.2
-@mixin above($above) {
-  @media screen and (min-width: $above){
-    @content;
+// v0.2.3
+@mixin above($above, $vertical: false) {
+  @if $vertical {
+    @media screen and (max-height: $below){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $above){
+      @content;
+    }
   }
 }
 
-@mixin below($below) {
-  @media screen and (max-width: $below){
-    @content;
+@mixin below($below, $vertical: false) {
+  @if $vertical {
+    @media screen and (max-height: $below){
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $below){
+      @content;
+    }
   }
 }
 
-@mixin between($low, $high) {
-  @media screen and (max-width: $low), screen and (max-width: $high) {
-    @content;
+@mixin between($low, $high, $vertical: false) {
+  @if $vertical {
+    @media screen and (max-height: $low), screen and (max-height: $high) {
+      @content
+    }
+  } @else {
+    @media screen and (max-width: $low), screen and (max-width: $high) {
+      @content;
+    }
   }
 }
 
