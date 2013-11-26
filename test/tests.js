@@ -37,4 +37,16 @@ describe('Mixins', function() {
   it('retina background image', function() {
     matchHelper('retina-background-image');
   });
+
+  it('hides content at passed value', function() {
+    matchHelper('hide-at');
+  });
+
+  it('full width at passed value', function() {
+    matchHelper('full-width-at');
+  });
+
+  it('centers text at passed value', function() {
+    matchHelper('center-text');
+  });
 });
