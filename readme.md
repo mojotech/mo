@@ -30,7 +30,7 @@ API
 }
 
 @include between(200px, 300px) {
-  background: yellow
+  background: yellow;
 }
 
 @include hideAt($xs-snap);
@@ -51,17 +51,17 @@ API
 // top right bottom left
 @include pos(10px, false, 2px, 10px);
 
-//convert text area to a single line ellipsis overflow area
+// convert text area to a single line ellipsis overflow area
 @include ellipsis(50px);
 
-//short hand for setting width and height of an element
+// short hand for setting width and height of an element
 @include size(100px, 200px);
 
-//you can also set both the width and height with a single value
+// you can also set both the width and height with a single value
 @include size(300px);
 
-//retina backgrounds
-//file path sans extenstion, extenstion
+// retina backgrounds
+// file path sans extenstion, extenstion
 
 @include retina-background-image('cat');
 //Will look for cat.png and cat@2x.png
