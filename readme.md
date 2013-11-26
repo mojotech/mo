@@ -33,11 +33,11 @@ API
   background: yellow;
 }
 
-@include hideAt($xs-snap);
+@include hideAt(500px);
 
-@include fullWidthAt($xs-snap);
+@include fullWidthAt(500px);
 
-@include centerTextAt($xs-snap);
+@include centerTextAt(500px);
 
 // hex
 @include bg-color(#FF0000, 0.4);
