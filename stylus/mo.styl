@@ -13,8 +13,8 @@ pos(args...)
     for arg, i in args
       {props[i]}: arg unless arg is false
 
-ellipsis(width)
-  width:         width
+ellipsis(width = false)
+  width:         width unless width is false
   overflow:      hidden
   white-space:   nowrap
   text-overflow: ellipsis
