@@ -6,7 +6,7 @@ pos(args...)
     args = args[1..length(args)]
 
   for arg, i in args
-    {props[i]}: arg
+    {props[i]}: arg unless arg is false
 
 ellipsis(width)
   width:         width
