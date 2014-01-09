@@ -1,12 +1,17 @@
 pos(args...)
   props = top, right, bottom, left
 
-  if args[0] is a 'ident'
+  if args[0] is a 'ident' and args[0] is not 'fill'
     position: args[0]
     args = args[1..length(args)]
 
-  for arg, i in args
-    {props[i]}: arg unless arg is false
+  if args[0] is 'fill'
+    args = args[1..length(args)]
+    for prop, i in props
+      {prop}: args[i] or 0 unless args[i] is false
+  else
+    for arg, i in args
+      {props[i]}: arg unless arg is false
 
 ellipsis(width)
   width:         width
