@@ -1,0 +1,9 @@
+pos(args...)
+  props = top, right, bottom, left
+
+  if args[0] is a 'ident'
+    position: args[0]
+    args = args[1..length(args)]
+
+  for arg, i in args
+    {props[i]}: arg
