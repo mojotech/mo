@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "mocha": "~1.13.0",
-    "node-sass": "~0.6.7"
+    "node-sass": "~0.8.1"
   }
 }
