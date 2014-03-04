@@ -1,0 +1,82 @@
+above($above, $vertical = false)
+  if $vertical
+    @media screen and (min-height: $above)
+      {block}
+  else
+    @media screen and (min-width: $above)
+      {block}
+below($below, $vertical = false)
+  if $vertical
+    @media screen and (max-height: $below)
+      {block}
+  else
+    @media screen and (max-width: $below)
+      {block}
+between($low, $high, $vertical = false)
+  if $vertical
+    @media screen and (max-height: $low), screen and (max-height: $high)
+      {block}
+  else
+    @media screen and (max-width: $low), screen and (max-width: $high)
+      {block}
+hideAt($screen_size)
+  @media screen and (max-width: $screen_size)
+    display: none
+fullWidthAt($screen_size)
+  @media screen and (max-width: $screen_size)
+    width: 100%
+centerTextAt($screen_size)
+  @media screen and (max-width: $screen_size)
+    text-align: center
+bg-color($r, $g, $b = false, $a = false)
+  $bg_color = white
+  $ie_8 = "\0/"
+  if $b
+    $bg_color = rgba($r, $g, $b, $a)
+  else
+    $bg_color = transparentize($r, 1 - $g)
+  background-color: opacify($bg_color, 1)
+  background-color: $bg_color
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}')#{$ie_8}
+  background-color: transparent#{$ie_8}
+  zoom: 1#{$ie_8}
+  {block}
+pos()
+  $positions = static, absolute, fixed, relative, initial, inherit
+  $props = top, right, bottom, left
+  $fill = false
+  /* Set to fill mode if necessary. */
+  if index($args, "fill")
+    $fill = true
+  $i = 1
+  for $arg in $args
+    if $arg == "fill"
+    else if index($positions, $arg)
+      position: $arg
+    else if $i <= length($props)
+      if $arg != false
+        #<Sass::Script::Tree::Funcall:0x007f1c2db16868>: $arg
+      else if $fill
+        #<Sass::Script::Tree::Funcall:0x007f1c2db134d8>: 0
+      $i = $i + 1
+  /* If necessary, fill in the rest of the properties. */
+  if $fill
+    //Stylus does not support while loops
+    //@while $i <= length($props)
+    //  #{nth($props, $i)}: 0
+    //  $i: $i + 1
+  {block}
+ellipsis($width = false)
+  if $width
+    width: $width
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+size($width, $height = $width)
+  width: $width
+  height: $height
+retina-background-image($name, $extension = png)
+  background-image: url("#{$name}.#{$extension}")
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: #<Sass::Script::Operation:0x007f7703501258>), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    background-image: url("#{$name}@2x.#{$extension}")
+    background-size: cover
