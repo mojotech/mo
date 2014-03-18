@@ -27,3 +27,11 @@ b {
 i {
   @include pos(static, 2px, 5px);
 }
+
+p {
+  @include pos(absolute, fill);
+}
+
+h4 {
+  @include pos(fill, 20px, false, 20px);
+}

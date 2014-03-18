@@ -76,10 +76,16 @@
 @mixin pos($args...) {
   $positions: static, absolute, fixed, relative, initial, inherit;
   $props: top, right, bottom, left;
-  $i: 1;
+  $fill: false;
 
+  // Set to fill mode if necessary.
+  @if index($args, 'fill') { $fill: true }
+
+  $i: 1;
   @each $arg in $args {
-    @if index($positions, $arg) {
+    @if $arg == 'fill' {} //do nothing
+
+    @else if index($positions, $arg) {
       position: $arg;
     }
 
@@ -87,6 +93,17 @@
       @if $arg != false {
         #{nth($props, $i)}: $arg;
       }
+      @else if $fill {
+        #{nth($props, $i)}: 0;
+      }
+      $i: $i + 1;
+    }
+  }
+
+  // If necessary, fill in the rest of the properties.
+  @if $fill {
+    @while $i <= length($props) {
+      #{nth($props, $i)}: 0;
       $i: $i + 1;
     }
   }

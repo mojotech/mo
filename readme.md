@@ -127,6 +127,8 @@ It takes an optional `position` param, and then takes 4 arguments for setting `t
 
 Any value that is set to `false` will not be set.
 
+If an argument of `fill` is given, `top`, `right`, `bottom`, and `left` will default to 0. Any one of these properties can be overridden with a value.
+
 ```scss
 .headline {
 	// position top right bottom left
@@ -136,6 +138,14 @@ Any value that is set to `false` will not be set.
 .headline {
 	// top right bottom left
 	@include pos(10px, false, 2px, 10px);
+}
+
+.headline {
+  @include pos(absolute, fill);
+}
+
+.headline {
+  @include pos(absolute, fill, 10px);
 }
 ```
 
