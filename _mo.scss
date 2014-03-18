@@ -84,7 +84,9 @@
     }
 
     @else if $i <= length($props) {
-      #{nth($props, $i)}: $arg;
+      @if $arg != false {
+        #{nth($props, $i)}: $arg;
+      }
       $i: $i + 1;
     }
   }
