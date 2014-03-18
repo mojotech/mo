@@ -73,30 +73,20 @@
   @content;
 }
 
-@mixin pos($location: false, $top: false, $right: false, $bottom: false, $left: false) {
-  @if $location == "relative" or $location == "absolute" or $location == "fixed" or $location == "static" {
-    position: $location;
-  } @else {
-    $left   : $bottom;
-    $bottom : $right;
-    $right  : $top;
-    $top    : $location;
-  }
+@mixin pos($args...) {
+  $positions: static, absolute, fixed, relative, initial, inherit;
+  $props: top, right, bottom, left;
+  $i: 1;
 
-  @if $left {
-    left: $left;
-  }
+  @each $arg in $args {
+    @if index($positions, $arg) {
+      position: $arg;
+    }
 
-  @if $top {
-    top: $top;
-  }
-
-  @if $right {
-    right: $right;
-  }
-
-  @if $bottom {
-    bottom: $bottom;
+    @else if $i <= length($props) {
+      #{nth($props, $i)}: $arg;
+      $i: $i + 1;
+    }
   }
 
   @content;
