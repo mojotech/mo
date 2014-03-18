@@ -109,14 +109,9 @@
   text-overflow:  ellipsis;
 }
 
-@mixin size($width, $height: false) {
+@mixin size($width, $height: $width) {
   width:  $width;
-
-  @if $height  {
-    height: $height;
-  } @else {
-    height: $width;
-  }
+  height: $height;
 }
 
 @mixin retina-background-image($name, $extension: png) {
