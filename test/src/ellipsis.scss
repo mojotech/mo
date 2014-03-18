@@ -3,3 +3,7 @@
 div {
   @include ellipsis(200px)
 }
+
+span {
+  @include ellipsis()
+}

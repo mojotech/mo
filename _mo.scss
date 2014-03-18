@@ -102,8 +102,8 @@
   @content;
 }
 
-@mixin ellipsis($width) {
-  width:          $width;
+@mixin ellipsis($width: false) {
+  @if $width { width: $width };
   overflow:       hidden;
   white-space:    nowrap;
   text-overflow:  ellipsis;

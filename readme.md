@@ -141,7 +141,7 @@ Any value that is set to `false` will not be set.
 
 ### Ellipsis
 
-This mixin provides a simple mechanism to turn a selector into single line ellipsis overflow area with an ellipsis.
+This mixin provides a simple mechanism to turn a selector into single line ellipsis overflow area with an ellipsis. An optional `width` property can be passed in.
 
 ```scss
 .headline {
