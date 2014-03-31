@@ -1,6 +1,6 @@
 {
   "name": "mo",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "a sass helper",
   "main": "index.js",
   "scripts": {
