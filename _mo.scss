@@ -119,8 +119,8 @@
   }
 }
 
-@mixin retina-background-image($name, $extension: png) {
-  background-image: url("#{$name}.#{$extension}");
+@mixin retina-background-image($file1, $file2) {
+  background-image: url("#{$file1}");
 
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -129,7 +129,7 @@
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) {
-    background-image: url("#{$name}@2x.#{$extension}");
+    background-image: url("#{$file2}");
     background-size: cover;
   }
 }
