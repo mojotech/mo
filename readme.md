@@ -20,11 +20,11 @@ mo is simple and small. built out of my need.
 	* [Full Width At](#full-width-at)
 	* [Center Text At](#center-text-at)
 	* [Background Color](#background-color)
-	* [Position](#position)			
-	* [Ellipsis](#ellipsis)		
-	* [Size](#size)				
+	* [Position](#position)
+	* [Ellipsis](#ellipsis)
+	* [Size](#size)
 	* [Retina Background Image](#retina-background-image)
-	
+
 
 ## Installing
 
@@ -104,9 +104,9 @@ This mixin sets `text-align: center;` at and below a given width.
 
 ### Background Color
 
-This mixin provides a way to set transparent backgrounds 
+This mixin provides a way to set transparent backgrounds
 in ie8 and up.
-It support an rgba syntax along with a hex and % opaque param. 
+It support an rgba syntax along with a hex and % opaque param.
 
 ```scss
 // hex
@@ -123,7 +123,7 @@ It support an rgba syntax along with a hex and % opaque param.
 
 This mixin provides a terse syntax for setting the `position`, `top`, `right`, `bottom`, and `left` properties of a given selector.
 
-It takes an optional `position` param, and then takes 4 arguments for setting `top`, `right`, `bottom`, and `left` respectively. 
+It takes an optional `position` param, and then takes 4 arguments for setting `top`, `right`, `bottom`, and `left` respectively.
 
 Any value that is set to `false` will not be set.
 
