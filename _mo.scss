@@ -73,50 +73,54 @@
   @content;
 }
 
-@mixin pos($location: false, $top: false, $right: false, $bottom: false, $left: false) {
-  @if $location == "relative" or $location == "absolute" or $location == "fixed" or $location == "static" {
-    position: $location;
-  } @else {
-    $left   : $bottom;
-    $bottom : $right;
-    $right  : $top;
-    $top    : $location;
+@mixin pos($args...) {
+  $positions: static, absolute, fixed, relative, initial, inherit;
+  $props: top, right, bottom, left;
+  $fill: false;
+
+  // Set to fill mode if necessary.
+  @if index($args, 'fill') { $fill: true }
+
+  $i: 1;
+  @each $arg in $args {
+    @if $arg == 'fill' {} //do nothing
+
+    @else if index($positions, $arg) {
+      position: $arg;
+    }
+
+    @else if $i <= length($props) {
+      @if $arg != false {
+        #{nth($props, $i)}: $arg;
+      }
+      @else if $fill {
+        #{nth($props, $i)}: 0;
+      }
+      $i: $i + 1;
+    }
   }
 
-  @if $left {
-    left: $left;
-  }
-
-  @if $top {
-    top: $top;
-  }
-
-  @if $right {
-    right: $right;
-  }
-
-  @if $bottom {
-    bottom: $bottom;
+  // If necessary, fill in the rest of the properties.
+  @if $fill {
+    @while $i <= length($props) {
+      #{nth($props, $i)}: 0;
+      $i: $i + 1;
+    }
   }
 
   @content;
 }
 
-@mixin ellipsis($width) {
-  width:          $width;
+@mixin ellipsis($width: false) {
+  @if $width { width: $width };
   overflow:       hidden;
   white-space:    nowrap;
   text-overflow:  ellipsis;
 }
 
-@mixin size($width, $height: false) {
+@mixin size($width, $height: $width) {
   width:  $width;
-
-  @if $height  {
-    height: $height;
-  } @else {
-    height: $width;
-  }
+  height: $height;
 }
 
 @mixin retina-background-image($name, $extension: png) {

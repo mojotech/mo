@@ -3,21 +3,21 @@ div {
   right: 2px; }
 
 h1 {
-  left: 0;
   top: 1px;
   right: 2px;
-  bottom: 5px; }
+  bottom: 5px;
+  left: 0; }
 
 span {
-  left: 0;
   top: 1px;
-  bottom: 5px; }
+  bottom: 5px;
+  left: 0; }
 
 h5 {
   position: absolute;
-  left: 0;
   top: 1px;
-  bottom: 5px; }
+  bottom: 5px;
+  left: 0; }
 
 h6 {
   position: fixed;
@@ -33,3 +33,16 @@ i {
   position: static;
   top: 2px;
   right: 5px; }
+
+p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+h4 {
+  top: 20px;
+  right: 0;
+  bottom: 20px;
+  left: 0; }

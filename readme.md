@@ -20,11 +20,11 @@ mo is simple and small. built out of my need.
 	* [Full Width At](#full-width-at)
 	* [Center Text At](#center-text-at)
 	* [Background Color](#background-color)
-	* [Position](#position)			
-	* [Ellipsis](#ellipsis)		
-	* [Size](#size)				
+	* [Position](#position)
+	* [Ellipsis](#ellipsis)
+	* [Size](#size)
 	* [Retina Background Image](#retina-background-image)
-	
+
 
 ## Installing
 
@@ -104,9 +104,9 @@ This mixin sets `text-align: center;` at and below a given width.
 
 ### Background Color
 
-This mixin provides a way to set transparent backgrounds 
+This mixin provides a way to set transparent backgrounds
 in ie8 and up.
-It support an rgba syntax along with a hex and % opaque param. 
+It support an rgba syntax along with a hex and % opaque param.
 
 ```scss
 // hex
@@ -123,9 +123,11 @@ It support an rgba syntax along with a hex and % opaque param.
 
 This mixin provides a terse syntax for setting the `position`, `top`, `right`, `bottom`, and `left` properties of a given selector.
 
-It takes an optional `position` param, and then takes 4 arguments for setting `top`, `right`, `bottom`, and `left` respectively. 
+It takes an optional `position` param, and then takes 4 arguments for setting `top`, `right`, `bottom`, and `left` respectively.
 
 Any value that is set to `false` will not be set.
+
+If an argument of `fill` is given, `top`, `right`, `bottom`, and `left` will default to 0. Any one of these properties can be overridden with a value.
 
 ```scss
 .headline {
@@ -137,11 +139,19 @@ Any value that is set to `false` will not be set.
 	// top right bottom left
 	@include pos(10px, false, 2px, 10px);
 }
+
+.headline {
+  @include pos(absolute, fill);
+}
+
+.headline {
+  @include pos(absolute, fill, 10px);
+}
 ```
 
 ### Ellipsis
 
-This mixin provides a simple mechanism to turn a selector into single line ellipsis overflow area with an ellipsis.
+This mixin provides a simple mechanism to turn a selector into single line ellipsis overflow area with an ellipsis. An optional `width` property can be passed in.
 
 ```scss
 .headline {
