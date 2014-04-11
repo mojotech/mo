@@ -1,4 +1,3 @@
-// v0.2.4
 @mixin above($above, $vertical: false) {
   @if $vertical {
     @media screen and (min-height: $above){
