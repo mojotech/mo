@@ -43,7 +43,7 @@ This mixin is used apply custom styles **at and below** a given pixel width.
 ```scss
 .headline {
 	@include below(100px) {
-	  background: red;
+		background: red;
 	}
 }
 ```
@@ -55,7 +55,7 @@ This mixin is used apply custom styles **at and above** a given above pixel widt
 ```scss
 .headline {
 	@include above(200px) {
-	  background: teal;
+		background: teal;
 	}
 }
 ```
@@ -67,7 +67,7 @@ This mixin is used apply custom styles **between** a given pixel width range.
 ```scss
 .headline {
 	@include between(200px, 300px) {
-	  background: yellow;
+		background: yellow;
 	}
 }
 ```
@@ -141,11 +141,11 @@ If an argument of `fill` is given, `top`, `right`, `bottom`, and `left` will def
 }
 
 .headline {
-  @include pos(absolute, fill);
+	@include pos(absolute, fill);
 }
 
 .headline {
-  @include pos(absolute, fill, 10px);
+	@include pos(absolute, fill, 10px);
 }
 ```
 
