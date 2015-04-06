@@ -1,5 +1,5 @@
 @import "./_mo";
 
 div {
-  @include hideAt(500px);
+  @include hide-at(500px);
 }

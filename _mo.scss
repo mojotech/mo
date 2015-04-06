@@ -34,65 +34,63 @@
   }
 }
 
-@mixin hideAt($screen_size) {
-  @media screen and (max-width: $screen_size) {
+@mixin hide-at($screen-size) {
+  @media screen and (max-width: $screen-size) {
     display: none;
   }
 }
 
-@mixin fullWidthAt($screen_size) {
-  @media screen and (max-width: $screen_size) {
+@mixin full-width-at($screen-size) {
+  @media screen and (max-width: $screen-size) {
     width: 100%;
   }
 }
 
-@mixin centerTextAt($screen_size) {
-  @media screen and (max-width: $screen_size) {
+@mixin center-text-at($screen-size) {
+  @media screen and (max-width: $screen-size) {
     text-align: center;
   }
 }
 
 @mixin bg-color($r, $g, $b: false, $a: false) {
-  $bg_color: #FFF;
-  $ie_8: '\0/';
+  $background-color: #fff;
+  $ie-8: "\0/";
 
   @if $b {
-    $bg_color: rgba($r, $g, $b, $a);
+    $background-color: rgba($r, $g, $b, $a);
   } @else {
-    $bg_color: transparentize($r, 1 - $g);
+    $background-color: transparentize($r, 1 - $g);
   }
 
-  background-color: opacify($bg_color, 1);
-  background-color: $bg_color;
+  background-color: opacify($background-color, 1);
+  background-color: $background-color;
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($bg_color)}', endColorstr='#{ie-hex-str($bg_color)}')#{$ie_8};
-  background-color: transparent#{$ie_8};
-  zoom: 1#{$ie_8};
+  background-color: transparent#{$ie-8};
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($background-color)}', endColorstr='#{ie-hex-str($background-color)}')#{$ie-8};
+  zoom: 1#{$ie-8};
 
   @content;
 }
 
 @mixin pos($args...) {
+  $fill: false;
   $positions: static, absolute, fixed, relative, initial, inherit;
   $props: top, right, bottom, left;
-  $fill: false;
 
   // Set to fill mode if necessary.
-  @if index($args, 'fill') { $fill: true }
+  @if index($args, "fill") { $fill: true }
 
   $i: 1;
   @each $arg in $args {
-    @if $arg == 'fill' {} //do nothing
+    @if $arg == "fill" {
 
-    @else if index($positions, $arg) {
+    } @else if index($positions, $arg) {
       position: $arg;
-    }
 
-    @else if $i <= length($props) {
+    } @else if $i <= length($props) {
       @if $arg != false {
         #{nth($props, $i)}: $arg;
-      }
-      @else if $fill {
+      } @else if $fill {
         #{nth($props, $i)}: 0;
       }
       $i: $i + 1;
@@ -111,15 +109,15 @@
 }
 
 @mixin ellipsis($width: false) {
-  @if $width { width: $width };
   overflow:       hidden;
-  white-space:    nowrap;
   text-overflow:  ellipsis;
+  white-space:    nowrap;
+  @if $width { width: $width };
 }
 
 @mixin size($width, $height: $width) {
-  width:  $width;
   height: $height;
+  width:  $width;
 }
 
 @mixin retina-background-image($name, $extension: png) {

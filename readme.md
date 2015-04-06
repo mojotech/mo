@@ -78,7 +78,7 @@ This mixin hides a given selector at and below a given pixel width.
 
 ```scss
 .headline {
-	@include hideAt(500px);
+	@include hide-at(500px);
 }
 ```
 
@@ -88,7 +88,7 @@ This mixin sets an element to `width: 100%;` at and below a given pixel width.
 
 ```scss
 .headline {
-	@include fullWidthAt(500px);
+	@include full-width-at(500px);
 }
 ```
 
@@ -98,7 +98,7 @@ This mixin sets `text-align: center;` at and below a given width.
 
 ```scss
 .headline {
-	@include centerTextAt(500px);
+	@include center-text-at(500px);
 }
 ```
 
@@ -184,12 +184,12 @@ The second way to use the tool is the optional second param where you can define
 
 ```scss
 .headline {
-	//Will look for cat.png and cat@2x.png
+	// Will look for cat.png and cat@2x.png
 	@include retina-background-image('cat');
 }
 
 .headline {
-	//Will look for cat.jpg and cat@2x.jpg
+	// Will look for cat.jpg and cat@2x.jpg
 	@include retina-background-image('cat', 'jpg');
 }
 

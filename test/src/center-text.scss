@@ -1,5 +1,5 @@
 @import "./_mo";
 
 div {
-  @include centerTextAt(500px);
+  @include center-text-at(500px);
 }
