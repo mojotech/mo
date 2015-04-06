@@ -3,6 +3,9 @@
   "version": "0.3.0",
   "description": "a sass helper",
   "main": "index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
