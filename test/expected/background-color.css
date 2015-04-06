@@ -1,13 +1,13 @@
 div {
   background-color: #f4643c;
   background-color: rgba(244, 100, 60, 0.4);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66F4643C', endColorstr='#66F4643C')\0/;
   background-color: transparent\0/;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66F4643C', endColorstr='#66F4643C')\0/;
   zoom: 1\0/; }
 
 #ok {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.4);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66FF0000', endColorstr='#66FF0000')\0/;
   background-color: transparent\0/;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66FF0000', endColorstr='#66FF0000')\0/;
   zoom: 1\0/; }
