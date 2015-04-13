@@ -4,6 +4,6 @@
 @media screen and (min-width: 300px) {
   h1 {
     background: yellow; } }
-@media screen and (max-width: 200px), screen and (max-width: 500px) {
+@media screen and (min-width: 200px) and (max-width: 500px) {
   h1 {
     background: red; } }
