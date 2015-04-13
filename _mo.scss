@@ -24,11 +24,11 @@
 
 @mixin between($low, $high, $vertical: false) {
   @if $vertical {
-    @media screen and (max-height: $low), screen and (max-height: $high) {
+    @media screen and (min-height: $low) and (max-height: $high) {
       @content
     }
   } @else {
-    @media screen and (max-width: $low), screen and (max-width: $high) {
+    @media screen and (min-width: $low) and (max-width: $high) {
       @content;
     }
   }
