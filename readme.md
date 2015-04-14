@@ -24,7 +24,7 @@ mo is simple and small. built out of my need.
 	* [Ellipsis](#ellipsis)
 	* [Size](#size)
 	* [Retina Background Image](#retina-background-image)
-
+* [Compiling Stylus](#compiling-stylus)
 
 ## Installing
 
@@ -195,3 +195,7 @@ The second way to use the tool is the optional second param where you can define
 
 ```
 
+## Compiling Stylus
+
+* `$ bundle install`
+* `$ rake convert`
